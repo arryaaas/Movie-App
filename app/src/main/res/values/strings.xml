@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">Movie App</string>
+    <string name="title_splash">Splash Screen</string>
+    <string name="title_movie">Movie</string>
+    <string name="title_tv">Tv Show</string>
+    <string name="title_search">Search</string>
+    <string name="title_favorite">Favorite</string>
+    <string name="title_detail">Detail</string>
+    <string name="sort_by">Sort By</string>
+    <string name="backdrop">Backdrop</string>
+    <string name="backdrop_shadow">Backdrop Shadow</string>
+    <string name="overview">Overview</string>
+    <string name="popularity">Popularity</string>
+    <string name="language">Language</string>
+    <string name="fab_favorite">Fab Favorite</string>
+    <string name="share">Share</string>
+    <string name="app_logo">App Logo</string>
+    <string name="query_hint">Type here to search</string>
+    <string name="no_result">No Result Found!</string>
+    <string name="error_message">There is an Error</string>
+</resources>

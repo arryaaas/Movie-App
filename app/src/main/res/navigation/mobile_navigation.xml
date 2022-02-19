@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_movie">
+
+    <fragment
+        android:id="@+id/navigation_movie"
+        android:name="com.arya.movieapp.movie.MovieFragment"
+        android:label="@string/title_movie"
+        tools:layout="@layout/fragment_movie">
+        <action
+            android:id="@+id/action_movieFragment_to_detailActivity"
+            app:destination="@+id/navigation_detail" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_tv"
+        android:name="com.arya.movieapp.tv.TvFragment"
+        android:label="@string/title_tv"
+        tools:layout="@layout/fragment_tv">
+        <action
+            android:id="@+id/action_tvFragment_to_detailActivity"
+            app:destination="@+id/navigation_detail" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_search"
+        android:name="com.arya.movieapp.search.SearchFragment"
+        android:label="@string/title_search"
+        tools:layout="@layout/fragment_search">
+        <action
+            android:id="@+id/action_searchFragment_to_detailActivity"
+            app:destination="@+id/navigation_detail" />
+    </fragment>
+
+    <fragment
+        app:moduleName="favorite"
+        android:id="@+id/navigation_favorite"
+        android:name="com.arya.movieapp.favorite.FavoriteFragment"
+        android:label="@string/title_favorite"
+        tools:layout="@layout/fragment_favorite">
+        <action
+            android:id="@+id/action_favoriteFragment_to_detailActivity"
+            app:destination="@+id/navigation_detail" />
+    </fragment>
+
+    <activity
+        android:id="@+id/navigation_detail"
+        android:name="com.arya.movieapp.detail.DetailActivity"
+        android:label="@string/title_detail"
+        tools:layout="@layout/activity_detail">
+        <argument
+            android:name="movie"
+            app:argType="com.arya.movieapp.core.domain.model.Movie" />
+    </activity>
+
+</navigation>
