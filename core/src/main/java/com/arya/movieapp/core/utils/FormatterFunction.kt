@@ -27,9 +27,6 @@ fun formatDate(releaseDate: String, format: String): String {
     return formattedDate
 }
 
-fun formatVoteAverage(voteAverage: Float): String =
-    String.format("%.1f", voteAverage.div(2F))
-
 fun formatOverview(overview: String): String = overview.ifEmpty {
     "Sorry, the synopsis is not yet available."
 }

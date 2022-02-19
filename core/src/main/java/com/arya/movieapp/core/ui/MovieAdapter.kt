@@ -8,7 +8,6 @@ import com.arya.movieapp.core.BuildConfig.URL_POSTER
 import com.arya.movieapp.core.databinding.ItemListBinding
 import com.arya.movieapp.core.domain.model.Movie
 import com.arya.movieapp.core.utils.formatDate
-import com.arya.movieapp.core.utils.formatVoteAverage
 import com.arya.movieapp.core.utils.loadImage
 
 class MovieAdapter : ListAdapter<Movie, MovieAdapter.MovieViewHolder>(MovieDiffCallback()) {
@@ -36,8 +35,8 @@ class MovieAdapter : ListAdapter<Movie, MovieAdapter.MovieViewHolder>(MovieDiffC
 
                 tvTitle.text = movie.title
                 tvRelease.text = formatDate(movie.releaseDate, "MMMM dd, yyyy")
-                ratingBar.rating = formatVoteAverage(movie.voteAverage).toFloat()
-                tvRating.text = formatVoteAverage(movie.voteAverage)
+                ratingBar.rating = movie.voteAverage.div(2F)
+                tvRating.text = movie.voteAverage.toString()
 
                 itemView.setOnClickListener {
                     onItemClick?.invoke(movie)

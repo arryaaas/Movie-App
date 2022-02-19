@@ -45,8 +45,8 @@ class DetailActivity : AppCompatActivity() {
 
             tvTitle.text = movie.title
             tvRelease.text = formatDate(movie.releaseDate, "MMMM dd, yyyy")
-            ratingBar.rating = formatVoteAverage(movie.voteAverage).toFloat()
-            tvRating.text = formatVoteAverage(movie.voteAverage)
+            ratingBar.rating = movie.voteAverage.div(2F)
+            tvRating.text = movie.voteAverage.toString()
 
             tvOverview.text = formatOverview(movie.overview)
             tvOverview.collapsingTextView()
